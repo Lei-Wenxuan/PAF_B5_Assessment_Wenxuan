@@ -27,7 +27,7 @@ public class Dataloader {
 
     List<JsonObject> filteredJsonObjList = new LinkedList<>();
 
-    try (ZipFile zipFile = new ZipFile("../" + dataPath)) {
+    try (ZipFile zipFile = new ZipFile(dataPath)) {
       Enumeration<? extends ZipEntry> entries = zipFile.entries();
 
       while (entries.hasMoreElements()) {
