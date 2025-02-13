@@ -16,7 +16,7 @@ ARG DEPLOY_DIR=/app
 WORKDIR ${DEPLOY_DIR}
 
 COPY --from=compiler /code_folder/target/movies-0.0.1-SNAPSHOT.jar movies.jar
-COPY --from=compiler /code_folder/src/main/resources/static/movies_post_2010.zip .
+# COPY --from=compiler /code_folder/src/main/resources/static/movies_post_2010.zip .
 
 ENV PORT=4000
 EXPOSE ${PORT}
