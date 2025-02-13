@@ -4,20 +4,20 @@ import java.util.Date;
 
 public class Movie {
     
-    private String imdbId = "";
-    private float voteAverage = 0f;
-    private int voteCount = 0;
+    private String imdbId;
+    private float voteAverage;
+    private int voteCount;
     private Date releaseDate;
-    private float revenue = 0f;
-    private float budget = 0f;
-    private int runtime = 0;
-    private String title = "";
-    private String director = "";
-    private String overview = "";
-    private String tagline = "";
-    private String genres = "";
-    private int imdbRating = 0;
-    private int imdbVotes = 0;
+    private float revenue;
+    private float budget;
+    private int runtime;
+    private String title;
+    private String director;
+    private String overview;
+    private String tagline;
+    private String genres;
+    private int imdbRating;
+    private int imdbVotes;
 
     public String getImdbId() {
         return imdbId;
@@ -102,6 +102,13 @@ public class Movie {
     }
     public void setImdbVotes(int imdbVotes) {
         this.imdbVotes = imdbVotes;
+    }
+    @Override
+    public String toString() {
+        return "Movie [imdbId=" + imdbId + ", voteAverage=" + voteAverage + ", voteCount=" + voteCount
+                + ", releaseDate=" + releaseDate + ", revenue=" + revenue + ", budget=" + budget + ", runtime="
+                + runtime + ", title=" + title + ", director=" + director + ", overview=" + overview + ", tagline="
+                + tagline + ", genres=" + genres + ", imdbRating=" + imdbRating + ", imdbVotes=" + imdbVotes + "]";
     }
 
 }

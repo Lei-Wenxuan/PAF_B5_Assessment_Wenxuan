@@ -23,15 +23,11 @@ import jakarta.json.JsonObject;
 public class Dataloader {
 
   // TODO: Task 2
-
-  // TODO: Task 2.1
-
-  // Task 2.2
   public List<JsonObject> load(String dataPath) {
 
     List<JsonObject> filteredJsonObjList = new LinkedList<>();
 
-    try (ZipFile zipFile = new ZipFile(dataPath)) {
+    try (ZipFile zipFile = new ZipFile("../" + dataPath)) {
       Enumeration<? extends ZipEntry> entries = zipFile.entries();
 
       while (entries.hasMoreElements()) {
